@@ -23,7 +23,7 @@ const Map = () => {
                 />
                 <Marker position={[23.7506, 90.3682]}>
                     <Popup>
-                        <h1 className='text-red-800 text-5xl'>Hospital</h1>
+                        <h1 className='text-red-800 text-5xl'>EmerGent </h1>
                     </Popup>
 
                 </Marker>
