@@ -1,14 +1,37 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import icon from "../../assets/faceIcon.png"
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 
 const Header = () => {
+
+    const { user, logOut, loading } = useContext(AuthContext)
+
+
+    // if (loading) {
+    //     return <div className="flex justify-center"><span className="loading loading-spinner loading-lg "></span></div>
+    // }
+
+    const handleSignOut = () => {
+
+        logOut()
+            .then()
+            .catch(error => {
+                console.error(error)
+            })
+    }
+
+
+
+
     const navLinks = <>
         <li><NavLink className="mr-2" to="/">Home</NavLink></li>
         <li><NavLink className="mr-2" to="/updateProfile">Update Profile</NavLink></li>
         <li><NavLink className="mr-2" to="/userProfile">User Profile</NavLink></li>
     </>
     return (
-        <div>
+        <div className="mt-1 mb-6">
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -31,7 +54,36 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    {/* <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar mr-3"> */}
+                    {/* <div className="tooltip tooltip-open tooltip-bottom" data-tip={user.displayName}>
+
+
+                            {
+                                user ? <img src={user.photoURL} alt="Coming soon" /> :
+                                    <img src={icon} alt="Coming soon" />
+
+
+                            }
+
+                        </div> */}
+
+                    <div className="tooltip tooltip-bottom  mr-5 rounded-full" data-tip={user ? user.displayName : 'UserName'}>
+                        <button className="btn btn-circle">
+                            {
+                                user ? <img className="rounded-full btn btn-circle" src={user.photoURL} alt="Coming soon" /> :
+                                    <img src={icon} alt="Coming soon" />
+                            }
+
+                        </button>
+
+                    </div>
+
+                    {/* </div> */}
+
+                    {
+                        user ? <button className="btn btn-outline font-semibold" onClick={handleSignOut}>Sign Out</button> :
+                            <Link to="/login" className="btn btn-outline font-semibold"><button>Login</button></Link>
+                    }
                 </div>
             </div>
         </div>

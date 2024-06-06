@@ -8,14 +8,12 @@ const Footer = () => {
     return (
         <div>
             <footer>
-
-
-                <div className=" h-4/5 relative bg-center" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }}>
+                <div className=" h-4/5 relative bg-center " style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }}>
                     <div className=" absolute inset-0 bg-gray-900 bg-opacity-75"> </div>
                     <div className="flex justify-between text-white ">
 
                         {/* Left side */}
-                        <div className="relative my-16 ml-24 w-full">
+                        <div className=" relative my-16 ml-24 w-full">
                             <h3 className="text-xl font-semibold ">Contact Us</h3>
                             <h2 className="text-4xl font-semibold my-5">Keep In Touch</h2>
                             <div className="flex items-center">

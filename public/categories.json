@@ -1,0 +1,99 @@
+[
+    {
+        "id": 1,
+        "estate_title": "Prime Office Space",
+        "segment_name": "Office Building",
+        "description": "Spacious office space located in the heart of downtown, ideal for startups and established businesses.",
+        "price": "$2,500,000",
+        "status": "sale",
+        "area": "5000 sq ft",
+        "location": "123 Main St, City Center",
+        "facilities": [
+            "Meeting Rooms",
+            "High-speed Internet",
+            "Parking"
+        ],
+        "image": "https://i.ibb.co/phvWGb5/kaleb-tapp-1de-Qb-U6-Dh-Bg-unsplash.jpg"
+    },
+    {
+        "id": 2,
+        "estate_title": "Retail Shopfront",
+        "segment_name": "Retail Space",
+        "description": "Excellent retail location with high foot traffic, perfect for boutique stores and franchises.",
+        "price": "$3,000/month",
+        "status": "rent",
+        "area": "1500 sq ft",
+        "location": "456 Market St, Shopping District",
+        "facilities": [
+            "Air Conditioning",
+            "Security System",
+            "Display Windows"
+        ],
+        "image": "https://i.ibb.co/VCVM4fx/museums-victoria-RQeh64k-Pq-I0-unsplash.jpg" 
+    },
+    {
+        "id": 3,
+        "estate_title": "Modern Warehouse",
+        "segment_name": "Warehouse",
+        "description": "Modern warehouse with ample storage space, loading docks, and advanced security systems.",
+        "price": "$1,800,000",
+        "status": "sale",
+        "area": "10000 sq ft",
+        "location": "789 Industrial Rd, Industrial Park",
+        "facilities": [
+            "Loading Docks",
+            "24/7 Security",
+            "Climate Control"
+        ],
+        "image": "https://i.ibb.co/pzxh6V2/james-moore-HIXd-Cy-Pye2-Y-unsplash.jpg"   
+    },
+    {
+        "id": 4,
+        "estate_title": "Industrial Facility",
+        "segment_name": "Industrial Facility",
+        "description": "State-of-the-art industrial facility equipped for manufacturing and large-scale production.",
+        "price": "$4,500,000",
+        "status": "sale",
+        "area": "15000 sq ft",
+        "location": "101 Factory Ln, Manufacturing District",
+        "facilities": [
+            "Heavy Machinery",
+            "Quality Control Labs",
+            "Warehouse Space"
+        ],
+        "image": "https://i.ibb.co/M8MKJQY/ant-rozetsky-SLIFI67jv5k-unsplash.jpg"  
+    },
+    {
+        "id": 5,
+        "estate_title": "Restaurant Space",
+        "segment_name": "Restaurant",
+        "description": "Fully equipped restaurant space in a prime location, ready for a new culinary venture.",
+        "price": "$5,000/month",
+        "status": "rent",
+        "area": "3000 sq ft",
+        "location": "202 Foodie St, Culinary Hub",
+        "facilities": [
+            "Commercial Kitchen",
+            "Dining Area",
+            "Outdoor Seating"
+        ],
+        "image": "https://i.ibb.co/M8tLFsK/abdullah-oguk-q-Crocisv-Gwc-unsplash.jpg"  
+    },
+    {
+        "id": 6,
+        "estate_title": "Entertainment Venue",
+        "segment_name": "Entertainment",
+        "description": "Versatile entertainment venue suitable for concerts, events, and performances, with a large seating capacity.",
+        "price": "$6,000,000",
+        "status": "sale",
+        "area": "20000 sq ft",
+        "location": "303 Showbiz Ave, Entertainment District",
+        "facilities": [
+            "Stage",
+            "Sound System",
+            "VIP Seating"
+        ],
+        "image": "https://i.ibb.co/3mLFrXV/chaz-mcgregor-9-Vx-Qe-C0-9-Q-unsplash.jpg"
+    }
+]
+
