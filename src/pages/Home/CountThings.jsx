@@ -18,7 +18,7 @@ const CountThings = () => {
     <div className='my-16'>
       <div>
         <div className='flex flex-col justify-center items-center mb-10'>
-          <h1 className="text-4xl font-bold text-neutral-800">Company Details</h1>
+          <h1 className="text-4xl font-bold text-neutral-800">About Us</h1>
           <h1 className="text-4xl font-bold text-neutral-800"></h1>
 
           <p className='text-lg text-center font-medium text-neutral-600 mt-4 w-4/5'>EmerGent Properties is a leading real estate company specializing in residential and commercial property development. With over 20 years of experience, we offer a wide range of services including property management, investment consultancy, and market analysis.</p>

@@ -33,15 +33,26 @@ const Home = () => {
             </Helmet>
             <Slider></Slider>
 
-            <div className='grid grid-cols-3 gap-4 auto-rows-auto'>
+            <div className='my-20'>
+                <div className='flex flex-col justify-center items-center mb-10'>
+                    <h1 className="text-4xl font-bold text-neutral-800">Properties For <span className='text-[#71b100]'>Sale</span> & <span className='text-[#71b100]'>Rent</span></h1>
 
-                {
-                    homeCards.map(homeCard => <EstateSec
-                        key={homeCard.id}
-                        homeCards={homeCard}
-                    ></EstateSec>)
-                }
+                    <div className="flex items-center mt-5">
+                        <p className="bg-black h-1 w-8 "></p>
+                        <p className="bg-[#71b100]  h-1 w-8 my-3"></p>
+                    </div>
 
+                </div>
+                <div className='grid grid-cols-3 gap-8 '>
+
+                    {
+                        homeCards.map(homeCard => <EstateSec
+                            key={homeCard.id}
+                            homeCards={homeCard}
+                        ></EstateSec>)
+                    }
+
+                </div>
             </div>
 
             <CountThings></CountThings>
