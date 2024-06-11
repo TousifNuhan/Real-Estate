@@ -1,12 +1,12 @@
 import { IoLocation } from "react-icons/io5";
-import dollar from "../../../assets/dollar-sign-solid.svg"
+import { Link } from "react-router-dom";
+import { FaDollarSign } from "react-icons/fa6";
+
 
 const EstateSec = ({ homeCards }) => {
 
-    console.log(homeCards)
 
-    const { image, estate_title, description, segment_name, price, status, area, location, facilities } = homeCards
-
+    const { id, image, estate_title, description, segment_name, price, status, area, location, facilities } = homeCards
 
     return (
         <div className=" pt-3">
@@ -27,16 +27,18 @@ const EstateSec = ({ homeCards }) => {
                     </div>
                     {/* < hr className="border border-neutral-600  w-full" /> */}
                     <div className="flex justify-center items-center">
-                        <IoLocation className="text-xl mr-2 text-[#71b100]" />
+                        <IoLocation className="text-xl mr-1 text-[#71b100]" />
                         <p className="text-base font-semibold ">{location}</p>
                     </div>
                     < hr className="border border-neutral-300 my-1 w-full" />
 
-                    <div className="flex  text-base text-neutral-800 font-medium">
-
-                        <p >{area}</p>
-                        <div className="flex justify-center items-center">
-                            <img className="h-4 w-4" src={dollar} alt="" />
+                    <div className="flex justify-between text-base text-neutral-800 font-medium">
+                        <div className="flex items-center ">
+                            <img className="h-6 w-8 " src="https://thumbs.dreamstime.com/b/square-area-line-icon-room-dimension-sign-vector-square-area-line-icon-room-dimension-sign-territory-measurement-symbol-quality-272758508.jpg" alt="" />
+                            <p >{area}</p>
+                        </div>
+                        <div className="flex justify-center items-center ">
+                            < FaDollarSign className="text-[#71b100] text-lg" />
                             <p className="text-end"> {price}</p>
                         </div>
 
@@ -44,7 +46,7 @@ const EstateSec = ({ homeCards }) => {
 
 
                     <div className="card-actions justify-start mt-4">
-                        <button className="text-white bg-[#71b100] px-4 py-3 rounded-lg hover:bg-white hover:text-black hover:border hover:border-[#71b100]">View Property</button>
+                        <Link to={`/homeCard/${id}`}><button className="text-white bg-[#71b100] px-4 py-3 rounded-lg hover:bg-white hover:text-black hover:border hover:border-[#71b100]">View Property</button></Link>
                     </div>
                 </div>
             </div>

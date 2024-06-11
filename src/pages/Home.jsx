@@ -63,3 +63,20 @@ const Home = () => {
 };
 
 export default Home;
+
+{/* <div>
+    <div className="flex items-center ">
+        <TiTickOutline className="text-[#71b100] text-xl" />
+        <p>{facilities[0]}</p>
+    </div>
+    <div className="flex">
+        <TiTickOutline className="text-[#71b100]" />
+        <p>{facilities[1]}</p>
+    </div>
+    <div className="flex">
+        <TiTickOutline className="text-[#71b100]" />
+        <p>{facilities[2]}</p>
+    </div>
+
+
+</div> */}
