@@ -21,7 +21,7 @@ const CountThings = () => {
           <h1 className="text-4xl font-bold text-neutral-800">About Us</h1>
           <h1 className="text-4xl font-bold text-neutral-800"></h1>
 
-          <p className='text-lg text-center font-medium text-neutral-600 mt-4 w-4/5'>EmerGent Properties is a leading real estate company specializing in residential and commercial property development. With over 20 years of experience, we offer a wide range of services including property management, investment consultancy, and market analysis.</p>
+          <p className='md:text-lg text-center font-medium text-neutral-600 mt-4 w-11/12 md:w-4/5'>EmerGent Properties is a leading real estate company specializing in residential and commercial property development. With over 20 years of experience, we offer a wide range of services including property management, investment consultancy, and market analysis.</p>
 
         </div>
       </div>
@@ -30,10 +30,10 @@ const CountThings = () => {
           <div className="container mx-auto flex justify-around text-white">
             {counters.map((counter, index) => (
               <div key={index} className="text-center">
-                <h2 className="text-4xl font-bold">
+                <h2 className="md:text-4xl font-bold">
                   {inView ? <CountUp end={counter.number} duration={2.5} /> : counter.number}
                 </h2>
-                <p className="text-xl">{counter.label}</p>
+                <p className="md:text-xl">{counter.label}</p>
               </div>
             ))}
           </div>

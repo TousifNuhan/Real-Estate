@@ -33,9 +33,9 @@ const Home = () => {
             </Helmet>
             <Slider></Slider>
 
-            <div className='my-20'>
-                <div className='flex flex-col justify-center items-center mb-10'>
-                    <h1 className="text-4xl font-bold text-neutral-800">Properties For <span className='text-[#71b100]'>Sale</span> & <span className='text-[#71b100]'>Rent</span></h1>
+            <div className='my-14 md:my-20'>
+                <div className='flex flex-col justify-center items-center mb-5 md:mb-10'>
+                    <h1 className="text-2xl md:text-4xl font-bold text-neutral-800">Properties For <span className='text-[#71b100]'>Sale</span> & <span className='text-[#71b100]'>Rent</span></h1>
 
                     <div className="flex items-center mt-5">
                         <p className="bg-black h-1 w-8 "></p>
@@ -43,7 +43,7 @@ const Home = () => {
                     </div>
 
                 </div>
-                <div className='grid grid-cols-3 gap-8 '>
+                <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8  '>
 
                     {
                         homeCards.map(homeCard => <EstateSec

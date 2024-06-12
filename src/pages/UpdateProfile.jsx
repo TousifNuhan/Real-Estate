@@ -51,12 +51,12 @@ const UpdateProfile = () => {
             </Helmet>
             <h1 className="text-center text-black text-3xl font-semibold">Edit Profile</h1>
             <p className="text-center text-neutral-500 text-base mt-1">Edit your profile details</p>
-            <div className="flex justify-center rounded-3xl mt-5">
+            <div className="flex flex-col md:flex-row justify-center rounded-3xl mt-5">
                 <div className="flex w-4/5 h-96 justify-center flex-1 p-4">
                     <img className="rounded-3xl" src={user.photoURL} alt="" />
                 </div>
-                <div className="w-2/5 mx-auto px-14  flex-1 p-4">
-                    <h1 className="text-neutral-800 text-xl font-medium">General Information :</h1>
+                <div className="md:w-2/5 md:mx-auto md:px-14 md:flex-1 md:p-4">
+                    <h1 className="text-neutral-800 mt-5 md:mt-0 text-lg md:text-xl font-semibold md:font-medium">General Information :</h1>
                     <form className="mt-5" onSubmit={saveChanges}>
                         <div className="form-control">
                             <label className="label">
@@ -78,7 +78,7 @@ const UpdateProfile = () => {
                         </div>
 
                         <div className="flex justify-center w-full ">
-                            <button className="bg-black text-white p-2 rounded-3xl text-center w-2/4 mt-12 ">Save Changes</button>
+                            <button className="bg-black text-white p-2 rounded-3xl text-center md:w-2/4 md:mt-12 mt-6 mb-4 md:mb-0">Save Changes</button>
                         </div>
                     </form>
 

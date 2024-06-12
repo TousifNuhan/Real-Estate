@@ -10,8 +10,8 @@ const EstateSec = ({ homeCards }) => {
 
     return (
         <div className=" pt-3">
-            <div className="card w-96 bg-base-100 shadow-xl">
-                <figure><img className="h-52 rounded-2xl w-80" src={image} alt="Shoes" /></figure>
+            <div className="card lg:w-96 bg-base-100 shadow-xl ">
+                <figure className="flex mx-auto w-full"><img className="h-52 rounded-2xl w-80 " src={image} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title text-2xl font-semibold">{estate_title}</h2>
                     <div className="flex items-center my-3">

@@ -3,8 +3,8 @@ import Marquee from "react-fast-marquee";
 const SponserSlider = () => {
     return (
         <div>
-            <h1 className="text-4xl font-bold text-neutral-800">Our Partners</h1>
-            <p className="text-base font-medium text-neutral-600 w-2/5 mt-3">At Emergent real estate company,we work with other companies to get the best out of our work.</p>
+            <h1 className="text-3xl md:text-4xl font-bold text-neutral-800">Our Partners</h1>
+            <p className="text-base font-medium text-neutral-600 md:w-2/3 lg:w-2/5 mt-3">At Emergent real estate company,we work with other companies to get the best out of our work.</p>
 
             <Marquee pauseOnHover={true} speed={40} className="mt-3 mb-5">
                 <div className="max-h-96 mb-5 flex justify-center">

@@ -33,10 +33,10 @@ const EstateDetails = () => {
             </div>
 
 
-            <div className="flex justify-between mt-20 ">
+            <div className="md:flex justify-between mt-20">
                 <div>
-                    <h1 className="card-title text-3xl font-medium ">{estate_title}</h1>
-                    <div className="flex justify-center items-center my-3 text-lg">
+                    <h1 className="card-title text-3xl font-semibold ">{estate_title}</h1>
+                    <div className="flex justify-start md:justify-center items-center my-3 text-lg ">
                         <IoLocation className=" text-[#71b100]" />
                         <p className=" font-medium ">{location}</p>
                     </div>
@@ -46,7 +46,7 @@ const EstateDetails = () => {
                     </div>
                 </div>
 
-                <div className="">
+                <div className="mt-12 md:mt-0">
                     <div className="flex items-center font-semibold">
                         < FaDollarSign className="text-[#71b100] text-3xl" />
                         <p className="text-3xl "> {price}</p>
@@ -77,15 +77,15 @@ const EstateDetails = () => {
 
             {/* description */}
 
-            <div className="flex justify-around">
+            <div className="md:flex justify-around">
                 <div>
                     <h1 className="text-3xl font-semibold">Description :</h1>
-                    <p className="text-lg font-medium w-80 ml-12 mt-2 leading-7 text-neutral-600">{description}</p>
+                    <p className="text-lg font-medium w-80  mt-2 leading-7 text-neutral-600">{description}</p>
                 </div>
 
                 {/* another details */}
 
-                <div className="mb-12 ">
+                <div className="mb-12 mt-10 md:mt-0">
                     <h1 className="text-3xl font-semibold">Facilities :</h1>
                     <div className="mt-2">
                         <ul className="ml-12 text-lg font-medium text-neutral-600">

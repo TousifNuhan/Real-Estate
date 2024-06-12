@@ -100,11 +100,11 @@ const Register = () => {
                     EmerGent | Register
                 </title>
             </Helmet>
-            <div style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1660119681754-db33b6ce5383?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }} className="p-10 w-full flex justify-center items-center min-h-screen rounded-2xl mt-3 mb-10 bg-center  relative">
+            <div style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1660119681754-db33b6ce5383?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }} className="p-10 w-full flex justify-center items-center md:h-4/5 lg:min-h-screen rounded-2xl mt-3 mb-10 bg-center relative">
                 <div className="absolute bg-gray-400 inset-0 opacity-75"></div>
-                <div className="relative bg-white py-10 rounded-3xl w-2/5 px-16">
+                <div className="relative bg-white py-10 rounded-3xl md:w-3/5 w-11/12 lg:w-2/5 px-8 md:px-20 lg:px-16">
                     <form onSubmit={handleRegister}>
-                        <h1 className=" text-center text-gray-900 text-4xl font-semibold">Register Now!</h1>
+                        <h1 className=" text-center text-gray-900 text-2xl font-semibold">Register Now!</h1>
                         <label >
                             <input type="text" name="name" placeholder="Name" className="focus:outline-none text-start w-full mt-12" required />
                             <hr className="mt-1 border-neutral-300" />
@@ -128,7 +128,7 @@ const Register = () => {
                             <button className="bg-black text-white p-2 rounded-3xl text-center w-2/4 mt-12 ">Register</button>
                         </div>
                     </form>
-                    <p className="text-center font-medium mt-3">Already have an account?  <Link to="/login" className="text-black underline font-semibold">Login</Link></p>
+                    <p className="text-center font-medium mt-6 md:mt-3">Already have an account?  <Link to="/login" className="text-black underline font-semibold">Login</Link></p>
                     <div>
                         <ToastContainer
                             position="top-right"
