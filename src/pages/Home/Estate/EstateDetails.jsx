@@ -13,7 +13,7 @@ const EstateDetails = () => {
     const homeCard = useLoaderData()
     console.log(homeCard)
 
-    const { id, image, estate_title, description, segment_name, price, status, area, location, facilities } = homeCard
+    const { image, estate_title, description, price, status, area, location, facilities } = homeCard
 
     return (
         <div className="">

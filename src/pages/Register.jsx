@@ -11,9 +11,9 @@ import { IoEyeOff } from "react-icons/io5";
 const Register = () => {
 
 
-    const { signUps} = useContext(AuthContext)
+    const { signUps } = useContext(AuthContext)
     const navigate = useNavigate();
-    const [showpass,setShowPass]=useState(false)
+    const [showpass, setShowPass] = useState(false)
 
     const handleRegister = e => {
         e.preventDefault();
@@ -21,9 +21,9 @@ const Register = () => {
         const form = new FormData(e.currentTarget)
         const email = form.get('email')
         const password = form.get('password')
-        const photoUrl=form.get('photoUrl')
-        const name=form.get('name')
-        console.log(email, password,name)
+        const photoUrl = form.get('photoUrl')
+        const name = form.get('name')
+        console.log(email, password, name)
 
 
         if (password.length < 6) {
@@ -80,13 +80,13 @@ const Register = () => {
                     // text: "You clicked the button!",
                     icon: "success"
                 });
-                updateProfile(result.currentUser,{
-                    photoURL:photoUrl,
-                    displayName:name,
+                updateProfile(result.currentUser, {
+                    photoURL: photoUrl,
+                    displayName: name,
 
                 })
-                .then(()=>console.log('photo'))
-                .catch(error=>console.error(error))
+                    .then(() => console.log('photo'))
+                    .catch(error => console.error(error))
             })
             .catch(error => {
                 console.log(error)
@@ -94,8 +94,6 @@ const Register = () => {
     }
     return (
         <div >
-
-
             <div style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1660119681754-db33b6ce5383?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }} className="p-10 w-full flex justify-center items-center min-h-screen rounded-2xl mt-3 mb-10 bg-center  relative">
                 <div className="absolute bg-gray-400 inset-0 opacity-75"></div>
                 <div className="relative bg-white py-10 rounded-3xl w-2/5 px-16">
@@ -114,10 +112,10 @@ const Register = () => {
                             <hr className="mt-1 border-neutral-300" />
                         </label>
                         <label className="flex">
-                            <input type={showpass ? "text": "password"} name="password" placeholder="Password" required className="focus:outline-none w-full mt-10 " />
-                          
-                           <span onClick={()=>setShowPass(!showpass)} className="relative top-11 text-xl">{showpass ? <IoEyeOff /> : <IoEye />  }</span>
-                          
+                            <input type={showpass ? "text" : "password"} name="password" placeholder="Password" required className="focus:outline-none w-full mt-10 " />
+
+                            <span onClick={() => setShowPass(!showpass)} className="relative top-11 text-xl">{showpass ? <IoEyeOff /> : <IoEye />}</span>
+
                         </label>
                         <hr className="mt-1 border-neutral-300" />
                         <div className="flex justify-center w-full ">
