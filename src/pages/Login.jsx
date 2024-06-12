@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { useContext } from "react";
@@ -11,6 +11,7 @@ const Login = () => {
 
     const { googleLogin, githubLogin, login } = useContext(AuthContext)
     const navigate=useNavigate()
+    const location=useLocation();
 
     const handleLogin = e => {
         e.preventDefault();
@@ -23,7 +24,8 @@ const Login = () => {
         .then(result=>{
             console.log(result.user)
             e.target.reset()
-            navigate('/')
+            navigate(location?.state ? location.state : '/')
+
             Swal.fire({
                 title: "Successfully Logged In!",
                 // text: "You clicked the button!",

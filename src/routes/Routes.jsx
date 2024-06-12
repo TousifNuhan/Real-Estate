@@ -8,6 +8,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import EstateSec from "../pages/Home/Estate/EstateSec";
 import EstateDetails from "../pages/Home/Estate/EstateDetails";
+import PrivateRoute from "./PrivateRoute";
 
 
 const estateLoader=async ({params}) => {
@@ -31,11 +32,11 @@ const router = createBrowserRouter([
             },
             {
                 path: "/updateProfile",
-                element: <UpdateProfile></UpdateProfile>
+                element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
             },
             {
                 path: "/userProfile",
-                element: <UserProfile></UserProfile>
+                element: <PrivateRoute><UserProfile></UserProfile></PrivateRoute>
             },
             {
                 path: "/login",
@@ -51,7 +52,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/homeCard/:id",
-                element: <EstateDetails></EstateDetails>,
+                element:<PrivateRoute><EstateDetails></EstateDetails></PrivateRoute> ,
                 loader: estateLoader
 
             }
