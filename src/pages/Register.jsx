@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { updateProfile } from "firebase/auth";
 import { IoEye } from "react-icons/io5";
 import { IoEyeOff } from "react-icons/io5";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
 
@@ -94,6 +95,11 @@ const Register = () => {
     }
     return (
         <div >
+            <Helmet>
+                <title>
+                    EmerGent | Register
+                </title>
+            </Helmet>
             <div style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1660119681754-db33b6ce5383?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }} className="p-10 w-full flex justify-center items-center min-h-screen rounded-2xl mt-3 mb-10 bg-center  relative">
                 <div className="absolute bg-gray-400 inset-0 opacity-75"></div>
                 <div className="relative bg-white py-10 rounded-3xl w-2/5 px-16">
@@ -148,3 +154,4 @@ const Register = () => {
 };
 
 export default Register;
+

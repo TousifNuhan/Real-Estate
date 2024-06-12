@@ -28,7 +28,9 @@ const Header = () => {
     const navLinks = <>
         <li><NavLink className="mr-2" to="/">Home</NavLink></li>
         <li><NavLink className="mr-2" to="/updateProfile">Update Profile</NavLink></li>
-        <li><NavLink className="mr-2" to="/userProfile">User Profile</NavLink></li>
+       {
+        user &&  <li><NavLink className="mr-2" to="/dashboard">Dashboard</NavLink></li>
+       }
     </>
     return (
         <div className="mt-1 mb-6">
@@ -54,19 +56,6 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    {/* <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar mr-3"> */}
-                    {/* <div className="tooltip tooltip-open tooltip-bottom" data-tip={user.displayName}>
-
-
-                            {
-                                user ? <img src={user.photoURL} alt="Coming soon" /> :
-                                    <img src={icon} alt="Coming soon" />
-
-
-                            }
-
-                        </div> */}
-
                     <div className="tooltip tooltip-bottom  mr-5 rounded-full" data-tip={user ? user.displayName : 'UserName'}>
                         <button className="btn btn-circle">
                             {
@@ -77,8 +66,6 @@ const Header = () => {
                         </button>
 
                     </div>
-
-                    {/* </div> */}
 
                     {
                         user ? <button className="btn btn-outline font-semibold" onClick={handleSignOut}>Sign Out</button> :

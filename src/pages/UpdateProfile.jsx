@@ -4,6 +4,7 @@ import { AuthContext } from "../providers/AuthProvider";
 import Swal from 'sweetalert2'
 import { updateProfile } from "firebase/auth";
 import auth from "../Firebase/firebase.config";
+import { Helmet } from "react-helmet-async";
 
 const UpdateProfile = () => {
 
@@ -45,6 +46,9 @@ const UpdateProfile = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>EmerGent | UpdateProfile</title>
+            </Helmet>
             <h1 className="text-center text-black text-3xl font-semibold">Edit Profile</h1>
             <p className="text-center text-neutral-500 text-base mt-1">Edit your profile details</p>
             <div className="flex justify-center rounded-3xl mt-5">

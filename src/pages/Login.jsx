@@ -4,14 +4,15 @@ import { FaGithub } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import Swal from 'sweetalert2'
+import { Helmet } from "react-helmet-async";
 
 
 
 const Login = () => {
 
     const { googleLogin, githubLogin, login } = useContext(AuthContext)
-    const navigate=useNavigate()
-    const location=useLocation();
+    const navigate = useNavigate()
+    const location = useLocation();
 
     const handleLogin = e => {
         e.preventDefault();
@@ -20,28 +21,28 @@ const Login = () => {
         const email = form.get('email')
         const password = form.get('password')
 
-        login(email,password)
-        .then(result=>{
-            console.log(result.user)
-            e.target.reset()
-            navigate(location?.state ? location.state : '/')
+        login(email, password)
+            .then(result => {
+                console.log(result.user)
+                e.target.reset()
+                navigate(location?.state ? location.state : '/')
 
-            Swal.fire({
-                title: "Successfully Logged In!",
-                // text: "You clicked the button!",
-                icon: "success"
-              });
+                Swal.fire({
+                    title: "Successfully Logged In!",
+                    // text: "You clicked the button!",
+                    icon: "success"
+                });
 
-        })
-        .catch(()=>{
-            Swal.fire({
-                icon: "error",
-                title: "You've enterred the wrong password",
-                text: "Please Try Again!",
-                footer: '<a href="#">Why do I have this issue?</a>'
-              });
-              
-        })
+            })
+            .catch(() => {
+                Swal.fire({
+                    icon: "error",
+                    title: "You've enterred the wrong password",
+                    text: "Please Try Again!",
+                    footer: '<a href="#">Why do I have this issue?</a>'
+                });
+
+            })
     }
 
     const googleSubmit = () => {
@@ -67,6 +68,11 @@ const Login = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>
+                    EmerGent | Login
+                </title>
+            </Helmet>
             <div style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1584279939954-f8c32f2581dc?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }} className="relative w-full flex justify-center items-center min-h-screen rounded-2xl mt-3 mb-10 bg-center ">
                 <div className="absolute bg-gray-600 inset-0 opacity-75"></div>
                 <div className="relative bg-white py-10 rounded-3xl w-2/5 px-16">
